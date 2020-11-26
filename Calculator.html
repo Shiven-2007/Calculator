@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            website
+        </title>
+        
+        
+
+    </head>
+    <body>
+        <script>
+            var x = 0
+                var y = 0
+                var i=1
+                var temp
+                var test = 1
+             
+            function addIt()
+            { 
+                while(i==1)
+                {
+                    x = prompt("Enter a number")
+                    if(x=="confirm") {break;}
+                    if(x==null){break}
+                    
+                        x=parseInt(x)
+                    
+                     y=x+y
+
+                }
+                document.getElementById("hello").innerHTML = y   
+            }
+            function subIt()
+            {
+                while(i==1)
+                {
+                    x = prompt("Enter a number")
+                    if(x==null){break}
+                    if(x=="confirm") {break;}
+                    else{
+                        x=parseInt(x)
+                    }
+                    
+                    if(test==1){z=x-y}
+                    y=z
+                    if(test!=1){z=y-x}
+                
+                    
+                    test=test+1
+                }
+                document.getElementById("hello").innerHTML = z 
+                x=y=z=0
+                test=1
+                  
+            }
+            function multIt(y=1)
+            {
+                while(i==1)
+                {
+                    if(x==null){break}
+                    x = prompt("Enter a number")
+                    if(x=="confirm") {break;}
+                    else{
+                        x=parseInt(x )
+                    }
+                     y=x*y
+
+                }
+                document.getElementById("hello").innerHTML = y  
+            }
+            function divIt(y=1)
+            {
+                while(i==1)
+                {
+                    if(x==null){break}
+                    x = prompt("Enter a number")
+                    if(x==0 ||x=="0"){
+                        alert("You cannot divide by zero please try again")
+                        break}
+                    if(x=="confirm") {break;}
+                    else if(test==1){
+                        x=parseInt(x)
+                        z=x/y
+                    }
+                    y=z
+                    if(test!=1){
+                        z=y/x
+                    }
+                    test=test+1
+
+                }
+                document.getElementById("hello").innerHTML = z  
+            }
+        </script>
+        
+
+        <input type="button" value="Add" onclick="addIt()"></button>
+        <input type="button" value="Subtract" onclick="subIt()"></button>
+        <input type="button" value="Multiply" onclick="multIt()"></button>
+        <input type="button" value="Divide" onclick="divIt()"></button>
+
+        <p id="hello">Answer will appear here</p>
+
+        
+    </body>
+</html>
